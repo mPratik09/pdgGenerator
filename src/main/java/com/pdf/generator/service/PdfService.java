@@ -1,7 +1,6 @@
 package com.pdf.generator.service;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -34,12 +33,10 @@ import com.itextpdf.text.pdf.PdfWriter;
 //
 //	public File pdfGenerator(String first_name, String contactNum, String emailId) 
 //	{
-//
 //		log.info("inside Service layer");
 //		log.info("Filepath:\t" + downloadPath);
-//
+//		
 //		String filePath = downloadPath + "user.pdf";
-//
 //		try
 //		{
 //			Document document = new Document();
@@ -54,9 +51,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 //			e.printStackTrace();
 //			return null;
 //		}
-//
 //	}
-//
+
 //	private static void addTitleAndTable(Document document, String firstName, String emailId, String contactNum)
 //			throws DocumentException
 //	{
@@ -129,8 +125,8 @@ public class PdfService
 {
 
 	private static final Logger log = LoggerFactory.getLogger(PdfService.class);
-	private static final String downloadPath = System.getProperty("user.home") + File.separator + "Downloads"
-			+ File.separator;
+//	private static final String downloadPath = System.getProperty("user.home") + File.separator + "Downloads"
+//			+ File.separator;
 
 	private static final Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD);
 	private static final Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.RED);
@@ -140,9 +136,9 @@ public class PdfService
 	public byte[] pdfGenerator(String firstName, String contactNum, String emailId)
 	{
 		log.info("inside Service layer");
-		log.info("Filepath:\t" + downloadPath);
+//		log.info("Filepath:\t" + downloadPath);
 
-		String filePath = downloadPath + "user.pdf";
+//		String filePath = downloadPath + "user.pdf";
 
 		try (ByteArrayOutputStream baos = new ByteArrayOutputStream())
 		{
